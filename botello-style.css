@@ -1,6 +1,6 @@
 .name {
     font-size: 100px;
-    font-family: 'Julius Sans One', cursive, sans-serif;
+    font-family: 'Marbre Sans', cursive, sans-serif;
     text-align: center;
     position: relative;
     top: 50%;
@@ -9,45 +9,62 @@
     color: white;
 
 }
-/* nav bar stuff */
-.navbar {
-    overflow: hidden;
-}
-
+/* ---------------------- nav bar stuff ---------------------- */
 .my-nav {
+    overflow: hidden;
     font-size: 18px;
     margin: -3%;
-}
-.navbar a {
-    position: fixed;
-    float: right;
-    color: white;
     text-align: center;
-    font-family: 'Julius Sans One', cursive, sans-serif;
-    margin: -3%;
 }
+
+
+a:hover {
+    text-decoration: none;
+}
+/*
 
 a {
     color: white;
     text-decoration: none;
     text-shadow: 2px 2px 2px #313638; 
 }
+*/
 
-/* mouse over link */
-a:hover {
-    color: white;
-    text-decoration: underline;
+
+/*----------------------------------------------------------------*/
+nav ul {
+  list-style: none;
+  text-align: center;
+  background: #BFD7EA;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 450;
+  text-shadow: 4px 4px 4px #363946;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #353D2F;
 }
 
 
-
-
-/*------------stuff i found online------------*/
 /* stroke */
 nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;
 }
+
 nav.stroke ul li a:after,
 nav.fill ul li a:after {
   position: absolute;
@@ -58,11 +75,13 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
+  background: white;
   height: 1px;
 }
+
 nav.stroke ul li a:hover:after {
   width: 100%;
+  background: #646536;
 }
 
 nav.fill ul li a {
@@ -87,12 +106,17 @@ nav.fill ul li a:hover:after {
   opacity: 1;
 }
 
+li { 
+    border-right: 1px solid #646536; 
+}
+
+.contact-border-right {
+    border-right: none;
+}
 
 
 
-
-
-/* end of nav bar stuff */
+/* ---------------------- end of nav bar stuff ---------------------- */
 
 
 body, html {
