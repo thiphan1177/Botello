@@ -6,26 +6,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       
     <!-- My CSS page -->
     <link rel="stylesheet" href="botello-style.css">
 
-      <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|Cormorant+Garamond|Julius+Sans+One|Poiret+One|Rozha+One|Sacramento|Tangerine" rel="stylesheet">
+    <!-- Google Fonts -->  
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|Cormorant+Garamond|Julius+Sans+One|Poiret+One|Rozha+One|Sacramento|Tangerine" rel="stylesheet">
       
   </head>
     
   <body class="fade-in">
       <div class="bgimg-1"> <!-- 1st image -->
           <div class="container home">
-            <div class="caption">
+            <div class="word-style">
                 <nav class="stroke ">
                       <ul class="row my-nav">
                         <li class="col"><a href="#home">Home</a></li>
                         <li class="col"><a href="Resume.pdf" target="_blank">Curriculum Vitae</a></li>
-                        <li class="col"><a href="#research">Research</a></li>
+     
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Research</a>
+                            <div class="dropdown-content">
+                                <a href="https://sophia.smith.edu/blog/barresilab/research/">Barressi Lab</a>
+                                <a href="http://www.science.smith.edu/classwiki/index.php/Medieval_Paleographic_Scale_Experiments">Howe Lab</a>
+                            </div>
+                        </li>
+
                         <li class="col"><a href="#about">About</a></li>
                         <li class="col contact-border-right"><a href="#contact">Contact</a></li>
                       </ul>
@@ -43,16 +51,36 @@
                     <div class="border">Andrea Botello</div>
                 </div>                
             </div>
-          </div>
+         </div>
       </div>
 
-      <div>
-          <h1 class="caption">About Me</h1>
-          <p id="about">
-              Hello! I'm Andrea! Here you'll find bits of the beautiful things in my life - the research I do, my passions for science and helping others. I am currently a student at Smith College majoring in neuroscience, and I do lab research dating manuscripts and on data quantification. When I'm not studying, I enjoy cooking, writing poetry, painting, and laughing at a good meme. 
-
-          </p>
+      <div id="about">
+          <h1 class="word-style about-heading">About Me</h1>
+          <div class="row">
+              <p class="col about-info">
+                  Hello! My name is Andrea and welcome to my site! Here you'll find my contact info, resume, and small snippets of the beautiful things in my life - the research that I do, my passions for science and helping others. I am currently a student at Smith College majoring in neuroscience, and I do lab research dating manuscripts for Professor Nicholas Howe and data quantification for Professor Michael Barresi. When I'm not studying, I enjoy cooking, writing poetry, painting, and laughing at a good meme. <br><br>
+              
+                  For research with Professor Howe: 
+                  <a href="http://www.science.smith.edu/classwiki/index.php/Medieval_Paleographic_Scale_Experiments">Click Here</a>
+                  
+                  <br>
+                  <br>
+                  
+                  For research with Professor Barresi: 
+                  <a href="https://sophia.smith.edu/blog/barresilab/research/">Click Here</a>
+              </p>
+        </div>
       </div>
+      
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p class="copyright">&copy Andrea Botello. Site By Thao Phan</p>
+              </div>
+        </div>  
+          
+          
+        </div>
       
 <!--
        2nd image 
@@ -89,5 +117,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      
+      
+    <script>
+        // Smooth Scroll on clicking nav items
+        $('li a').click(function () {
+          var $href = $(this).attr('href');
+          $('body').stop().animate({
+            scrollTop: $($href).offset().top
+          }, 1000);
+          return false;
+        });
+
+//        // back to top
+//        $('#toTop a').click(function () {
+//          $('body').animate({
+//            scrollTop: 0
+//          }, 1000);
+//          return false;
+//        });
+    </script>
+      
+      <script type="text/javascript" src="js/bootstrap/bootstrap-dropdown.js"></script>
+
+    <script>
+             $(document).ready(function(){
+                $('.dropdown-toggle').dropdown()
+            });
+    </script>
+      
+      
+      
+      
   </body>
 </html>
